@@ -291,6 +291,10 @@ stages:
             <<: *mongo-vars
             <<: *global-env
       - Upload: *upload-artifacts
+      - ShellCommand:
+          name: sleepy
+          command: sleep 3600
+          alwaysRun: true
 
   post-merge:
     worker:
