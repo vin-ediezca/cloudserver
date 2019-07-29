@@ -133,6 +133,10 @@ spec:
         limits:
           cpu: 200m
           memory: 128Mi
+      volumeMounts:
+        - name: redis
+          readOnly: false
+          mountPath: /data
     {%- endif %}
     {% if vars.env.CI_PROXY is defined and vars.env.CI_PROXY == "true" -%}
     - name: squid
@@ -174,5 +178,9 @@ spec:
       emptyDir: {}
     {% if vars.env.S3METADATA is defined and vars.env.S3METADATA == "mongodb" -%}
     - name: mongo
+      emptyDir: {}
+    {%- endif %}
+    {% if vars.redis is defined and vars.redis == "enabled" -%}
+    - name: redis
       emptyDir: {}
     {%- endif %}
