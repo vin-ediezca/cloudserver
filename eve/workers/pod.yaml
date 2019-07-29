@@ -74,6 +74,12 @@ spec:
           cpu: "2"
           memory: {{ vars.s3Mem }}
       volumeMounts:
+        - name: s3-metadata
+          readOnly: false
+          mountPath: /usr/src/app/localMetadata
+        - name: s3-data
+          readOnly: false
+          mountPath: /usr/src/app/localData
         - name: creds
           readOnly: false
           mountPath: /root/.aws
@@ -161,6 +167,10 @@ spec:
     - name: certs
       emptyDir: {}
     - name: artifacts
+      emptyDir: {}
+    - name: s3-data
+      emptyDir: {}
+    - name: s3-metadata
       emptyDir: {}
     {% if vars.env.S3METADATA is defined and vars.env.S3METADATA == "mongodb" -%}
     - name: mongo
