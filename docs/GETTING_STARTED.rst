@@ -4,7 +4,6 @@ Getting Started
 .. figure:: ../res/scality-cloudserver-logo.png
    :alt: Zenko CloudServer logo
 
-|CircleCI| |Scality CI|
 
 Dependencies
 ------------
