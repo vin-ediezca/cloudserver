@@ -1,13 +1,8 @@
 Docker
 ======
 
--  `Environment Variables <environment-variables>`__
--  `Tunables and setup tips <tunables-and-setup-tips>`__
--  `Examples for continuous integration with Docker 
-   <continuous-integration-with-docker-hosted-cloudserver>`__
--  `Examples for going into production with Docker 
-   <in-production-w-a-Docker-hosted-cloudserver>`__
-
+-  `Environment Variables <_environment-variables>`__
+-  `Tunables and setup tips <.. _tunables-and-setup-tips>`__
 .. _environment-variables:
 
 Environment Variables
