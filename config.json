@@ -4,7 +4,7 @@
     "replicationGroupId": "RG001",
     "restEndpoints": {
         "localhost": "us-east-1",
-        "127.0.0.1": "us-east-1",
+        "cloudserver": "us-east-1",
         "cloudserver-front": "us-east-1",
         "s3.docker.test": "us-east-1",
         "127.0.0.2": "us-east-1",
@@ -29,7 +29,7 @@
                         "zenkoazuretest.blob.core.windows.net"],
     "replicationEndpoints": [{
         "site": "zenko",
-        "servers": ["127.0.0.1:8000"],
+        "servers": ["cloudserver:8000"],
         "default": true
     }, {
         "site": "us-east-2",
@@ -62,7 +62,7 @@
         "dumpLevel": "error"
     },
     "healthChecks": {
-        "allowFrom": ["127.0.0.1/8", "::1"]
+        "allowFrom": ["cloudserver/8", "::1"]
     },
     "metadataClient": {
         "host": "localhost",
